@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:devarchive;MODE=Oracle;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+
+security:
+  jwt:
+    secret: test-secret-key-must-be-at-least-32-bytes-long
+    access-token-expiration: 900000
+    refresh-token-expiration: 1209600000
+
+app:
+  initial-admin:
+    username: admin
+    password: admin
+    email: admin@devarchive.local
